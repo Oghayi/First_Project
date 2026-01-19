@@ -7,6 +7,10 @@ app.use(express.json()); //middleware to parse JSON bodies it gets from the clie
 
 //import routes
 import userRouter from "./routes/user.routes.js";
+import postRouter from "./routes/post.routes.js";
+
+//routes declaration
+app.use("/api/v1/posts", postRouter);
 
 //routes declaration
 app.use("/api/v1/users", userRouter);
